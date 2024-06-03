@@ -20,8 +20,8 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS','0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6075512585').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL','0')
-auth_grp = environ.get('AUTH_GROUP', "")
+auth_channel = environ.get('AUTH_CHANNEL')
+auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 SUPPORT_CHANNEL = environ.get('CHANNEL_USERNAME')
@@ -36,7 +36,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram files')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL','-1002041484396'))
-FORCESUB_CHANNEL = int(environ.get('FORCESUB_CHANNEL'))
+FORCESUB_CHANNEL = int(environ.get('FORCESUB_CHANNEL','0'))
 SLOW_MODE_DELAY = int(environ.get('SLOW_MODE_DELAY', 60))
 WAIT_TIME = int(environ.get('AUTO_DELETE_WAIT_TIME', 1800))
 FORWARD_CHANNEL = int(environ.get('FORWARD_CHANNEL', "-1002150715003"))
