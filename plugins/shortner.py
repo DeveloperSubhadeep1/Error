@@ -12,8 +12,8 @@ async def shortlink(link):
         return await adlinkfly(link)
         
 async def shareus(link):
-    url = f'https://api.shareus.io/easy_api'
-    api_key = "uYnR5DeLGOT72EOmEAelPA8JY622"
+    url = f'https://ziplinker.net/api?'
+    api_key = "9ea91a2c95f97bf82e4362fd37e45f3c86120644"
     params = {'key': api_key, 'link': link}
     try:
         async with aiohttp.ClientSession() as session:
