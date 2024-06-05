@@ -37,7 +37,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram files')
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL','-1002041484396'))
 FORCESUB_CHANNEL = int(environ.get('FORCESUB_CHANNEL','0'))
-SLOW_MODE_DELAY = int(environ.get('SLOW_MODE_DELAY', 60))
+SLOW_MODE_DELAY = int(environ.get('SLOW_MODE_DELAY', 2))
 WAIT_TIME = int(environ.get('AUTO_DELETE_WAIT_TIME', 1800))
 FORWARD_CHANNEL = int(environ.get('FORWARD_CHANNEL', "-1002150715003"))
 
